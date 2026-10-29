@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #1b2540;
+  --color-ink-soft: #5b6786;
+  --color-ball: #f2d13c;
+  --color-sky: #d6e6f2;
+  --color-paper: #f7f8f5;
+  --color-leash: #e0483a;
+
+  --font-sans: 'Bricolage Grotesque', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-paper font-sans text-ink;
+    font-optical-sizing: auto;
+  }
+
+  ::placeholder {
+    @apply text-ink-soft opacity-100;
+  }
+
+  :focus-visible {
+    @apply outline-3 outline-offset-3 outline-ink;
+  }
+}
